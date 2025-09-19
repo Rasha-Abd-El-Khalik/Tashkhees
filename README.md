@@ -11,7 +11,6 @@
 ![SpeechRecognition](https://img.shields.io/badge/Lib-SpeechRecognition-lightblue)  
 ![gTTS](https://img.shields.io/badge/Lib-gTTS-brightgreen)  
 ![Gemini](https://img.shields.io/badge/API-Gemini-lightblue)  
-![License](https://img.shields.io/badge/License-MIT-grey)  
 
 ---
 
@@ -102,25 +101,4 @@ The fine-tuned **MARBERT + LoRA** model achieved strong performance across all 5
 ✅ Diagonal values = correct predictions  
 ⚠️ Off-diagonal values = misclassifications  
 
----
 
-## 📊 Confusion Matrix Heatmap (Optional)  
-
-You can generate a heatmap visualization using this snippet inside your notebook:  
-
-```python
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import confusion_matrix
-
-# y_true and y_pred should be your test labels and predictions
-cm = confusion_matrix(y_true, y_pred)
-
-plt.figure(figsize=(8,6))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
-            xticklabels=['Diabetes','General Surgery','Orthopedics','Respiratory','Endocrinology'],
-            yticklabels=['Diabetes','General Surgery','Orthopedics','Respiratory','Endocrinology'])
-plt.ylabel('True Label')
-plt.xlabel('Predicted Label')
-plt.title('Confusion Matrix Heatmap')
-plt.show()
